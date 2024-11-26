@@ -9,6 +9,11 @@ const port = 5000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'https://theshapingmind.in' // Allow only your domain to make requests
+}));
 
 
 
