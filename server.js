@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
+
 
 // Middleware
 app.use(cors());
@@ -32,8 +33,8 @@ app.use(cors({
 const transporter = nodemailer.createTransport({
   service: 'gmail', // You can change this to other providers (SendGrid, etc.)
   auth: {
-    user: 'dantedevilmaycry56go@gmail.com',  // Replace with your email
-    pass: 'cjqt smiy tnyg golp',   // Replace with your email password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
