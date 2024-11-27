@@ -39,7 +39,7 @@ app.post('/send-email', (req, res) => {
 
   // 1. Send email to the user (confirmation email)
   const userMailOptions = {
-    from: 'dantedemonmaycry56go@gmail.com',  // Your email (or no-reply email)
+    from: 'theshapingmind@gmail.com',  // Your email (or no-reply email)
     to: email,                     // Send to the user's email
     subject: 'Thank you for contacting us!',
     text: `
@@ -60,7 +60,7 @@ app.post('/send-email', (req, res) => {
   // 2. Send email to you (the admin) with the user's details
   const adminMailOptions = {
     from: email,  // The user's email address (the sender's email)
-    to: 'dantedemonmaycry56go@gmail.com',  // Your email address (where you receive submissions)
+    to: 'theshapingmind@gmail.com',  // Your email address (where you receive submissions)
     subject: `New Contact Form Submission from ${firstName} ${lastName}`,
     text: `
       You have a new contact form submission:
