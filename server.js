@@ -70,8 +70,6 @@ app.post('/send-email', (req, res) => {
       - Email: ${email}
       - Location: ${location}
       - Comment: ${comment}
-
-      Please respond to the user as needed.
     `,
   };
 
